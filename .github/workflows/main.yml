@@ -15,7 +15,7 @@ jobs:
       - name: Build docker image
         run: docker build -t sampleimg/sample-nodejs .
       - name: Publish image to docker hub
-        run: docker push isampleimg/sample-nodejs:latest
+        run: docker push sampleimg/sample-nodejs:latest
         
   deploy:
     needs: build
