@@ -74,7 +74,7 @@
     "placementConstraints": [],
     "compatibilities": [
         "EC2"
-        "FARGATE"
+        
     ],
     "requiresCompatibilities": [
         "EC2"
