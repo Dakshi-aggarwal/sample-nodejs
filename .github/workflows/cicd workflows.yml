@@ -51,5 +51,7 @@ jobs:
           service: sample-service
           cluster: DevCluster
           wait-for-service-stability: true 
+          service-stability-period: 300
+
           
       
