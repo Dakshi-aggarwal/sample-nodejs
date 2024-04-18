@@ -49,7 +49,7 @@ jobs:
         with:
           task-definition: nodejs-task-defination.json
           service: nodejs-service
-          cluster: samplecluster
+          cluster: DevCluster
           wait-for-service-stability: true 
           
       
