@@ -1,10 +1,10 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:164821215713:task-definition/sample-nodejs-task-defination:11",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:164821215713:task-definition/sample-nodejs-task-defination:13",
     "containerDefinitions": [
         {
             "name": "sample-nodejs",
             "image": "164821215713.dkr.ecr.us-east-1.amazonaws.com/sample-nodejs:latest",
-            "cpu": 0,
+            "cpu": 1024,
             "portMappings": [
                 {
                     "name": "sample-nodejs-5000-tcp",
@@ -28,13 +28,19 @@
                 },
                 "secretOptions": []
             },
-            "systemControls": []
+            "systemControls": [],
+            "resourceRequirements": [
+                {
+                    "value": "2",
+                    "type": "GPU"
+                }
+            ]
         }
     ],
     "family": "sample-nodejs-task-defination",
     "taskRoleArn": "arn:aws:iam::164821215713:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::164821215713:role/ecsTaskExecutionRole",
-    "revision": 11,
+    "revision": 13,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -73,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-04-23T08:23:52.985Z",
+    "registeredAt": "2024-04-23T08:59:32.417Z",
     "registeredBy": "arn:aws:iam::164821215713:root",
     "tags": []
 }
